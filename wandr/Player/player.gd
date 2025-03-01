@@ -1,7 +1,10 @@
 extends CharacterBody2D
-@export var gravity = 750
-@export var run_speed = 150
-@export var jump_speed = -300
+@export var gravity = 500
+@export var run_speed = 300
+@export var jump_speed = -280
+@export var max_jumps = 2
+@export var double_jump_factor = 1.5
+var jump_count = 0
 #enum {IDLE, RUN, JUMP, HURT, DEAD}
 #var state = IDLE
 #func _ready():
@@ -13,7 +16,7 @@ extends CharacterBody2D
 			#$AnimationPlayer.play("idle")
 		#RUN:
 			#$AnimationPlayer.play("run")
-		#HURT:
+		#sHURT:
 			#$AnimationPlayer.play("hurt")
 		#JUMP:
 			#$AnimationPlayer.play("jump_up")
@@ -32,9 +35,9 @@ func get_input():
 		velocity.x -= run_speed
 		$Sprite2D.flip_h = true
 	# only allow jumping when on the ground
-	#if jump and is_on_floor():
+	if jump and is_on_floor():
 		#change_state(JUMP)
-		#velocity.y = jump_speed
+		velocity.y = jump_speed
 	## IDLE transitions to RUN when moving
 	#if state == IDLE and velocity.x != 0:
 		#change_state(RUN)
