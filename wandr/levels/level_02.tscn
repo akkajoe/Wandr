@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=4 uid="uid://cn8sbqftn2ukg"]
+
+[ext_resource type="PackedScene" uid="uid://cglvmvx001t2w" path="res://level_base.tscn" id="1_37g0n"]
+[ext_resource type="Texture2D" uid="uid://c4887l8em72ws" path="res://assets/bg/level_2bg.jpg" id="2_ui2aa"]
+
+[node name="Level02" instance=ExtResource("1_37g0n")]
+
+[node name="World" parent="." index="0"]
+tile_map_data = PackedByteArray("AAAc/g0AAAAAAAAAAAAd/g0AAAAAAAAAAAAe/g0AAAAAAAAAAAAf/g0AAAAAAAAAAAAg/g0AAAAAAAAAAAAh/g0AAAAAAAAAAAAi/g0AAAAAAAAAAAAj/g0AAAAAAAAAAAAk/g0AAAAAAAAAAAAl/g0AAAAAAAAAAAAm/g0AAAAAAAAAAAAn/g0AAAAAAAAAAAAo/g0AAAAAAAAAAAAp/g0AAAAAAAAAAAAq/g0AAAAAAAAAAAAr/g0AAAAAAAAAAAAs/g0AAAAAAAAAAAAt/g0AAAAAAAAAAAAu/g0AAAAAAAAAAAAv/g0AAAAAAAAAAAAw/g0AAAAAAAAAAAAx/g0AAAAAAAAAAAAy/g0AAAAAAAAAAAAz/g0AAAAAAAAAAAA0/g0AAAAAAAAAAAA1/g0AAAAAAAAAAAA2/g0AAAAAAAAAAAA3/g0AAAAAAAAAAAA4/g0AAAAAAAAAAAA5/g0AAAAAAAAAAAA6/g0AAAAAAAAAAAA7/g0AAAAAAAAAAAA8/g0AAAAAAAAAAAA9/g0AAAAAAAAAAAA+/g0AAAAAAAAAAAA//g0AAAAAAAAAAABA/g0AAAAAAAAAAABB/g0AAAAAAAAAAABC/g0AAAAAAAAAAABD/g0AAAAAAAAAAABE/g0AAAAAAAAAAABF/g0AAAAAAAAAAABG/g0AAAAAAAAAAABH/g0AAAAAAAAAAABI/g0AAAAAAAAAAABJ/g0AAAAAAAAAAABK/g0AAAAAAAAAAABL/g0AAAAAAAAAAABM/g0AAAAAAAAAAABN/g0AAAAAAAAAAABO/g0AAAAAAAAAAABP/g0AAAAAAAAAAABQ/g0AAAAAAAAAAABR/g0AAAAAAAAAAABS/g0AAAAAAAAAAABT/g0AAAAAAAAAAABU/g0AAAAAAAAAAABV/g0AAAAAAAAAAABW/g0AAAAAAAAAAABX/g0AAAAAAAAAAABY/g0AAAAAAAAAAABZ/g0AAAAAAAAAAABa/g0AAAAAAAAAAABb/g0AAAAAAAAAAABc/g0AAAAAAAAAAABd/g0AAAAAAAAAAABe/g0AAAAAAAAAAABf/g0AAAAAAAAAAABg/g0AAAAAAAAAAAA=")
+
+[node name="SpawnPoint" parent="." index="2"]
+position = Vector2(1079, 532)
+
+[node name="TextureRect" type="TextureRect" parent="." index="3"]
+z_index = -1
+offset_left = -1374.0
+offset_top = 329.0
+offset_right = 23839.0
+offset_bottom = 3534.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_ui2aa")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="4"]
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
+polygon = PackedVector2Array(1148, 595, 1100, 575, 1059, 571, 1037, 582, 1021, 581, 996, 561, 967, 541, 945, 535, 929, 547, 844, 639, 812, 649, 1147, 650)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" index="1"]
+position = Vector2(-140, 1)
+polygon = PackedVector2Array(668, 647, 632, 598, 607, 573, 591, 576, 571, 591, 542, 603, 517, 601, 485, 568, 458, 559, 424, 565, 407, 589, 340, 649)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" index="2"]
+polygon = PackedVector2Array(915, 451, 925, 441, 951, 445, 966, 453, 984, 451, 960, 457, 940, 452, 929, 454, 926, 461)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" index="3"]
+polygon = PackedVector2Array(915, 450, 893, 443, 867, 449, 837, 448, 837, 462, 858, 472, 884, 466, 909, 474, 933, 470)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D" index="4"]
+position = Vector2(-142, 2)
+polygon = PackedVector2Array(188, 647, 132, 557, 116, 543, 107, 542, 100, 560, 94, 577, 76, 594, 57, 607, 37, 612, 12, 608, -6, 587, -24, 582, -42, 578, -63, 586, -80, 600, -95, 601, -109, 603, -135, 597, -169, 579, -197, 553, -211, 550, -235, 559, -294, 595, -321, 603, -364, 589, -397, 575, -410, 580, -420, 600, -433, 625, -461, 649)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D" index="5"]
+polygon = PackedVector2Array(824, 403, 829, 403, 841, 405, 848, 408, 857, 406, 855, 409, 847, 410, 836, 409, 828, 410)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D" index="6"]
+polygon = PackedVector2Array(838, 448, 826, 439, 805, 429, 780, 423, 759, 421, 747, 422, 731, 429, 721, 438, 711, 444, 696, 445, 681, 440, 670, 434, 659, 425, 667, 435, 679, 447, 691, 452, 709, 455, 720, 448, 744, 433, 773, 431, 808, 439, 837, 464)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="StaticBody2D" index="7"]
+polygon = PackedVector2Array(322, 500, 352, 497, 384, 493, 411, 466, 382, 482, 347, 482, 312, 488)

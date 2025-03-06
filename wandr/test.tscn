@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c15fuhxe0aye8"]
+
+[ext_resource type="PackedScene" uid="uid://cglvmvx001t2w" path="res://level_base.tscn" id="1_5o85k"]
+
+[node name="levelBase" instance=ExtResource("1_5o85k")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="3"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
+position = Vector2(580, -120)
+polygon = PackedVector2Array(240, 610, 316, 539, 462, 491, 612, 618)

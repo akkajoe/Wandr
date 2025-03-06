@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Wandr"
-run/main_scene="res://levels/level_01.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+run/main_scene="uid://boanu56dhkb13"
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameState="*res://game_state.gd"
 
 [display]
 

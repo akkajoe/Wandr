@@ -1,10 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfaqcpqmo64dd"]
+[gd_scene load_steps=3 format=3 uid="uid://bfaqcpqmo64dd"]
 
+[ext_resource type="Script" uid="uid://cb7nbto54kj3k" path="res://Main/main.gd" id="1_g6dry"]
 [ext_resource type="PackedScene" uid="uid://q6re6ej7k4rd" path="res://Player/player.tscn" id="1_gfp3l"]
 
 [node name="Main" type="Node"]
+script = ExtResource("1_g6dry")
 
 [node name="player" parent="." instance=ExtResource("1_gfp3l")]
 scale = Vector2(0.2, 0.2)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
