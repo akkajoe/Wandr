@@ -1,7 +1,7 @@
 extends Node
 var num_levels = 2
 var current_level = 0
-var game_scene = "res://main.tscn"
+var game_scene = "res://levels/level_02.tscn"
 var level_one_scene = "res://levels/level_01.tscn"
 func restart():
 	current_level = 0
@@ -9,4 +9,5 @@ func restart():
 func next_level():
 	current_level += 1
 	if current_level <= num_levels:
+		print('INN')
 		get_tree().change_scene_to_file(game_scene)

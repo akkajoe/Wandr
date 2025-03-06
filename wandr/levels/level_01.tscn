@@ -28,7 +28,7 @@ position = Vector2(21, 613)
 position = Vector2(25, 603)
 
 [node name="door" parent="." index="3" instance=ExtResource("2_mckh2")]
-position = Vector2(1093, 19)
+position = Vector2(126, 613)
 scale = Vector2(0.25, 0.25)
 
 [node name="Door" parent="." index="4"]
@@ -36,4 +36,4 @@ scale = Vector2(0.25, 0.25)
 tile_map_data = PackedByteArray("AAAfAJkAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_mckh2")
 
-[connection signal="body_entered" from="door" to="." method="_on_door_body_entered"]
+[connection signal="body_entered" from="door" to="." method="_on_door_entered"]

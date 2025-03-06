@@ -4,6 +4,7 @@ var door_scene = load("res://items/door.tscn")
 
 func _ready():
 	#$player.reset($SpawnPoint.position)
+	print('check')
 	spawn_items()
 func spawn_items():
 	var item_cells = $Door.get_used_cells()
@@ -11,7 +12,6 @@ func spawn_items():
 		var data = $Door.get_cell_tile_data(cell)
 		var type = data.get_custom_data("type")
 		if type == "door":
-			print("yesss")
 			var door = door_scene.instantiate()
 			add_child(door)
 			door.position = $Door.map_to_local(cell)
@@ -22,6 +22,7 @@ func spawn_items():
 			#item.init(type, $Items.map_to_local(cell))
 			#item.picked_up.connect(self._on_item_picked_up)s
 
-func _on_door_entered(body):
+func _on_door_entered(_body):
+	print("yesss")
 	GameState.next_level()
 	

@@ -8,19 +8,13 @@
 [node name="World" parent="." index="0"]
 tile_map_data = PackedByteArray("AAAc/g0AAAAAAAAAAAAd/g0AAAAAAAAAAAAe/g0AAAAAAAAAAAAf/g0AAAAAAAAAAAAg/g0AAAAAAAAAAAAh/g0AAAAAAAAAAAAi/g0AAAAAAAAAAAAj/g0AAAAAAAAAAAAk/g0AAAAAAAAAAAAl/g0AAAAAAAAAAAAm/g0AAAAAAAAAAAAn/g0AAAAAAAAAAAAo/g0AAAAAAAAAAAAp/g0AAAAAAAAAAAAq/g0AAAAAAAAAAAAr/g0AAAAAAAAAAAAs/g0AAAAAAAAAAAAt/g0AAAAAAAAAAAAu/g0AAAAAAAAAAAAv/g0AAAAAAAAAAAAw/g0AAAAAAAAAAAAx/g0AAAAAAAAAAAAy/g0AAAAAAAAAAAAz/g0AAAAAAAAAAAA0/g0AAAAAAAAAAAA1/g0AAAAAAAAAAAA2/g0AAAAAAAAAAAA3/g0AAAAAAAAAAAA4/g0AAAAAAAAAAAA5/g0AAAAAAAAAAAA6/g0AAAAAAAAAAAA7/g0AAAAAAAAAAAA8/g0AAAAAAAAAAAA9/g0AAAAAAAAAAAA+/g0AAAAAAAAAAAA//g0AAAAAAAAAAABA/g0AAAAAAAAAAABB/g0AAAAAAAAAAABC/g0AAAAAAAAAAABD/g0AAAAAAAAAAABE/g0AAAAAAAAAAABF/g0AAAAAAAAAAABG/g0AAAAAAAAAAABH/g0AAAAAAAAAAABI/g0AAAAAAAAAAABJ/g0AAAAAAAAAAABK/g0AAAAAAAAAAABL/g0AAAAAAAAAAABM/g0AAAAAAAAAAABN/g0AAAAAAAAAAABO/g0AAAAAAAAAAABP/g0AAAAAAAAAAABQ/g0AAAAAAAAAAABR/g0AAAAAAAAAAABS/g0AAAAAAAAAAABT/g0AAAAAAAAAAABU/g0AAAAAAAAAAABV/g0AAAAAAAAAAABW/g0AAAAAAAAAAABX/g0AAAAAAAAAAABY/g0AAAAAAAAAAABZ/g0AAAAAAAAAAABa/g0AAAAAAAAAAABb/g0AAAAAAAAAAABc/g0AAAAAAAAAAABd/g0AAAAAAAAAAABe/g0AAAAAAAAAAABf/g0AAAAAAAAAAABg/g0AAAAAAAAAAAA=")
 
+[node name="player" parent="." index="1"]
+position = Vector2(1064, 501)
+
 [node name="SpawnPoint" parent="." index="2"]
 position = Vector2(1079, 532)
 
-[node name="TextureRect" type="TextureRect" parent="." index="3"]
-z_index = -1
-offset_left = -1374.0
-offset_top = 329.0
-offset_right = 23839.0
-offset_bottom = 3534.0
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_ui2aa")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="4"]
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="3"]
 collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
@@ -48,3 +42,12 @@ polygon = PackedVector2Array(838, 448, 826, 439, 805, 429, 780, 423, 759, 421, 7
 
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="StaticBody2D" index="7"]
 polygon = PackedVector2Array(322, 500, 352, 497, 384, 493, 411, 466, 382, 482, 347, 482, 312, 488)
+
+[node name="TextureRect" type="TextureRect" parent="StaticBody2D/CollisionPolygon2D8" index="0"]
+z_index = -1
+offset_left = -1374.0
+offset_top = 329.0
+offset_right = 23839.0
+offset_bottom = 3534.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_ui2aa")
