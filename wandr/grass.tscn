@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5la5njmcfbny"]
+
+[ext_resource type="Texture2D" uid="uid://3468bio5hqv7" path="res://assets/items/grass/0.png" id="1_2qnaq"]
+[ext_resource type="Script" uid="uid://ckb1nae6paply" path="res://grass.gd" id="1_pmnf0"]
+[ext_resource type="Texture2D" uid="uid://halge8v2ttrl" path="res://assets/items/grass/1.png" id="2_pmnf0"]
+[ext_resource type="Texture2D" uid="uid://dngpqhifn4kn2" path="res://assets/items/grass/2.png" id="3_6ljfx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqx3w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2qnaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pmnf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6ljfx")
+}],
+"loop": true,
+"name": &"grass",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2qnaq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="grass" type="Area2D"]
+script = ExtResource("1_pmnf0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wqx3w")
+animation = &"grass"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(1138, -338, 1014, -141, 781, 35, 532, 113, 402, 308, 373, 442, -1141, 378, -900, 12, -514, -284, -55, -395, -221, -250, -444, -79, -625, 180, -625, 300, -418, 100, 142, -331, 521, -432, 806, -398, 482, -310, 280, -219, 93, -32, -8, 175, -44, 378, 52, 302, 244, 77, 524, -58, 848, -120, 1043, -255)

@@ -1,53 +1,76 @@
-[gd_scene load_steps=3 format=4 uid="uid://cn8sbqftn2ukg"]
+[gd_scene load_steps=5 format=4 uid="uid://cn8sbqftn2ukg"]
 
 [ext_resource type="PackedScene" uid="uid://cglvmvx001t2w" path="res://level_base.tscn" id="1_37g0n"]
-[ext_resource type="Texture2D" uid="uid://c4887l8em72ws" path="res://assets/bg/level_2bg.jpg" id="2_ui2aa"]
+[ext_resource type="Script" uid="uid://6h22sctpvgsc" path="res://levels/level_02.gd" id="2_8yqd8"]
+[ext_resource type="Texture2D" uid="uid://b7k5s1188hqme" path="res://assets/World/GROUND.png" id="2_g685p"]
+[ext_resource type="PackedScene" uid="uid://c5la5njmcfbny" path="res://grass.tscn" id="4_h518d"]
 
 [node name="Level02" instance=ExtResource("1_37g0n")]
+script = ExtResource("2_8yqd8")
 
 [node name="World" parent="." index="0"]
 tile_map_data = PackedByteArray("AAAc/g0AAAAAAAAAAAAd/g0AAAAAAAAAAAAe/g0AAAAAAAAAAAAf/g0AAAAAAAAAAAAg/g0AAAAAAAAAAAAh/g0AAAAAAAAAAAAi/g0AAAAAAAAAAAAj/g0AAAAAAAAAAAAk/g0AAAAAAAAAAAAl/g0AAAAAAAAAAAAm/g0AAAAAAAAAAAAn/g0AAAAAAAAAAAAo/g0AAAAAAAAAAAAp/g0AAAAAAAAAAAAq/g0AAAAAAAAAAAAr/g0AAAAAAAAAAAAs/g0AAAAAAAAAAAAt/g0AAAAAAAAAAAAu/g0AAAAAAAAAAAAv/g0AAAAAAAAAAAAw/g0AAAAAAAAAAAAx/g0AAAAAAAAAAAAy/g0AAAAAAAAAAAAz/g0AAAAAAAAAAAA0/g0AAAAAAAAAAAA1/g0AAAAAAAAAAAA2/g0AAAAAAAAAAAA3/g0AAAAAAAAAAAA4/g0AAAAAAAAAAAA5/g0AAAAAAAAAAAA6/g0AAAAAAAAAAAA7/g0AAAAAAAAAAAA8/g0AAAAAAAAAAAA9/g0AAAAAAAAAAAA+/g0AAAAAAAAAAAA//g0AAAAAAAAAAABA/g0AAAAAAAAAAABB/g0AAAAAAAAAAABC/g0AAAAAAAAAAABD/g0AAAAAAAAAAABE/g0AAAAAAAAAAABF/g0AAAAAAAAAAABG/g0AAAAAAAAAAABH/g0AAAAAAAAAAABI/g0AAAAAAAAAAABJ/g0AAAAAAAAAAABK/g0AAAAAAAAAAABL/g0AAAAAAAAAAABM/g0AAAAAAAAAAABN/g0AAAAAAAAAAABO/g0AAAAAAAAAAABP/g0AAAAAAAAAAABQ/g0AAAAAAAAAAABR/g0AAAAAAAAAAABS/g0AAAAAAAAAAABT/g0AAAAAAAAAAABU/g0AAAAAAAAAAABV/g0AAAAAAAAAAABW/g0AAAAAAAAAAABX/g0AAAAAAAAAAABY/g0AAAAAAAAAAABZ/g0AAAAAAAAAAABa/g0AAAAAAAAAAABb/g0AAAAAAAAAAABc/g0AAAAAAAAAAABd/g0AAAAAAAAAAABe/g0AAAAAAAAAAABf/g0AAAAAAAAAAABg/g0AAAAAAAAAAAA=")
 
 [node name="player" parent="." index="1"]
-position = Vector2(1064, 501)
+position = Vector2(1080, 509)
 
 [node name="SpawnPoint" parent="." index="2"]
 position = Vector2(1079, 532)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." index="3"]
-collision_mask = 2
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="4"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
-polygon = PackedVector2Array(1148, 595, 1100, 575, 1059, 571, 1037, 582, 1021, 581, 996, 561, 967, 541, 945, 535, 929, 547, 844, 639, 812, 649, 1147, 650)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" index="1"]
-position = Vector2(-140, 1)
-polygon = PackedVector2Array(668, 647, 632, 598, 607, 573, 591, 576, 571, 591, 542, 603, 517, 601, 485, 568, 458, 559, 424, 565, 407, 589, 340, 649)
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" index="2"]
-polygon = PackedVector2Array(915, 451, 925, 441, 951, 445, 966, 453, 984, 451, 960, 457, 940, 452, 929, 454, 926, 461)
-
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" index="3"]
-polygon = PackedVector2Array(915, 450, 893, 443, 867, 449, 837, 448, 837, 462, 858, 472, 884, 466, 909, 474, 933, 470)
-
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D" index="4"]
-position = Vector2(-142, 2)
-polygon = PackedVector2Array(188, 647, 132, 557, 116, 543, 107, 542, 100, 560, 94, 577, 76, 594, 57, 607, 37, 612, 12, 608, -6, 587, -24, 582, -42, 578, -63, 586, -80, 600, -95, 601, -109, 603, -135, 597, -169, 579, -197, 553, -211, 550, -235, 559, -294, 595, -321, 603, -364, 589, -397, 575, -410, 580, -420, 600, -433, 625, -461, 649)
-
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D" index="5"]
-polygon = PackedVector2Array(824, 403, 829, 403, 841, 405, 848, 408, 857, 406, 855, 409, 847, 410, 836, 409, 828, 410)
-
-[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D" index="6"]
-polygon = PackedVector2Array(838, 448, 826, 439, 805, 429, 780, 423, 759, 421, 747, 422, 731, 429, 721, 438, 711, 444, 696, 445, 681, 440, 670, 434, 659, 425, 667, 435, 679, 447, 691, 452, 709, 455, 720, 448, 744, 433, 773, 431, 808, 439, 837, 464)
-
-[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="StaticBody2D" index="7"]
-polygon = PackedVector2Array(322, 500, 352, 497, 384, 493, 411, 466, 382, 482, 347, 482, 312, 488)
-
-[node name="TextureRect" type="TextureRect" parent="StaticBody2D/CollisionPolygon2D8" index="0"]
-z_index = -1
-offset_left = -1374.0
-offset_top = 329.0
-offset_right = 23839.0
-offset_bottom = 3534.0
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" index="0"]
+position = Vector2(913, 573)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_ui2aa")
+texture = ExtResource("2_g685p")
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D" index="1"]
+position = Vector2(433, 573)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_g685p")
+flip_h = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="StaticBody2D" index="2"]
+position = Vector2(-46, 573)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_g685p")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="3"]
+position = Vector2(913, 572)
+scale = Vector2(0.1, 0.1)
+polygon = PackedVector2Array(2390, 140, 2200, 39.9995, 2070, -50.0005, 2000, -60.0005, 1880, -30.0005, 1740, -0.000488281, 1590, 0, 1350, 39.9995, 1210, 59.9995, 930, -40, 530, -230, 220, -240, -160, -230, -570, -200, -810, -100, -930, -70, -1060, -60, -1310, -100, -1540, -230, -1810, -480, -2070, -640, -2390, -740, -2630, -670, -2840, -580, -3050, -430, -3200, -280, -3310, -190, -3490, -100, -3750, -60, -3960, -90, -4150, -180, -4400, -230, -4740, -230, -5300, -240, -5830, 0, -6020, 30, -6200, 0, -6340, 0, -6570, -40, -6700, -70, -6820, -110, -6950, -100, -7070, 29.9995, -7190, 110, -7470, -100, -7600, -100, -7710, -60.0005, -8060, 19.9995, -8210, 9.99951, -8420, 39.9995, -8600, 9.99951, -9040, -220, -10040, -210, -10310, -150, -10390, -90.0005, -10570, -50.0005, -10740, -50.0005, -10970, -110, -11200, -270, -11490, -520, -11870, -720, -12000, -740, -11990, 760, -7460, 760, -130.001, 750, 2380, 740)
+
+[node name="grass" parent="." index="5" instance=ExtResource("4_h518d")]
+position = Vector2(1152, 580)
+rotation = 0.574213
+scale = Vector2(0.01, 0.01)
+
+[node name="grass2" parent="." index="6" instance=ExtResource("4_h518d")]
+position = Vector2(1140, 571)
+rotation = 0.574213
+scale = Vector2(0.01, 0.01)
+
+[node name="grass3" parent="." index="7" instance=ExtResource("4_h518d")]
+position = Vector2(1130, 564)
+rotation = 0.364774
+scale = Vector2(0.01, 0.01)
+
+[node name="grass4" parent="." index="8" instance=ExtResource("4_h518d")]
+position = Vector2(1119, 561)
+rotation = 0.148353
+scale = Vector2(0.01, 0.01)
+
+[node name="grass5" parent="." index="9" instance=ExtResource("4_h518d")]
+position = Vector2(1105, 563)
+rotation = -0.228638
+scale = Vector2(0.01, 0.01)
+
+[node name="grass6" parent="." index="10" instance=ExtResource("4_h518d")]
+position = Vector2(1090, 566)
+rotation = -0.228638
+scale = Vector2(0.01, 0.01)
+
+[node name="grass7" parent="." index="11" instance=ExtResource("4_h518d")]
+position = Vector2(1069, 570)
+rotation = -0.228638
+scale = Vector2(0.01, 0.01)

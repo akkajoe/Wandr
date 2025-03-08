@@ -7,8 +7,8 @@ extends CharacterBody2D
 var jump_count = 0
 #enum {IDLE, RUN, JUMP, HURT, DEAD}
 #var state = IDLE
-#func _ready():
-	#change_state(IDLE)
+func _ready():
+	pass
 #func change_state(new_state):
 	#state = new_state
 	#match state:
@@ -54,3 +54,4 @@ func _physics_process(delta):
 func reset(_position):
 	position = _position
 	show()
+	
