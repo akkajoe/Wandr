@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cn8sbqftn2ukg"]
+[gd_scene load_steps=14 format=3 uid="uid://cn8sbqftn2ukg"]
 
 [ext_resource type="PackedScene" uid="uid://cglvmvx001t2w" path="res://level_base.tscn" id="1_37g0n"]
 [ext_resource type="Script" uid="uid://6h22sctpvgsc" path="res://levels/level_02.gd" id="2_8yqd8"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cqojob2slctjo" path="res://leaf.tscn" id="9_cwmx8"]
 [ext_resource type="AudioStream" uid="uid://dh1qxmoudtwh6" path="res://assets/audio/birds-chirping-calm-173695.mp3" id="10_05651"]
 [ext_resource type="Texture2D" uid="uid://bcwodojyn0lc2" path="res://assets/bg/orivale_bg.png" id="11_xxuo2"]
+[ext_resource type="Texture2D" uid="uid://be7rxerfdnm4o" path="res://assets/World/ground2.png" id="12_liqpl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h518d"]
 size = Vector2(28, 366.5)
@@ -642,3 +643,25 @@ parameters/looping = true
 position = Vector2(417, 338)
 scale = Vector2(0.71728, 0.71728)
 texture = ExtResource("11_xxuo2")
+
+[node name="ground2" type="Sprite2D" parent="." index="119"]
+position = Vector2(959, 610)
+scale = Vector2(0.101442, 0.0678667)
+texture = ExtResource("12_liqpl")
+
+[node name="ground5" type="Sprite2D" parent="." index="120"]
+position = Vector2(-14, 613)
+scale = Vector2(0.122998, 0.0678667)
+texture = ExtResource("12_liqpl")
+
+[node name="ground3" type="Sprite2D" parent="." index="121"]
+position = Vector2(487, 610)
+scale = Vector2(0.0951937, 0.0677579)
+texture = ExtResource("12_liqpl")
+flip_h = true
+
+[node name="ground4" type="Sprite2D" parent="." index="122"]
+position = Vector2(487, 610)
+scale = Vector2(0.0951937, 0.0677579)
+texture = ExtResource("12_liqpl")
+flip_h = true
