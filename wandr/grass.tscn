@@ -30,12 +30,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="grass" type="Area2D"]
+[node name="grass" type="Area2D" groups=["grass"]]
 script = ExtResource("1_pmnf0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wqx3w")
-animation = &"grass"
+animation = &"idle"
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." groups=["grass"]]
 polygon = PackedVector2Array(1138, -338, 1014, -141, 781, 35, 532, 113, 402, 308, 373, 442, -1141, 378, -900, 12, -514, -284, -55, -395, -221, -250, -444, -79, -625, 180, -625, 300, -418, 100, 142, -331, 521, -432, 806, -398, 482, -310, 280, -219, 93, -32, -8, 175, -44, 378, 52, 302, 244, 77, 524, -58, 848, -120, 1043, -255)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

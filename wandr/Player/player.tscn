@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://q6re6ej7k4rd"]
+[gd_scene load_steps=5 format=3 uid="uid://q6re6ej7k4rd"]
 
 [ext_resource type="Texture2D" uid="uid://wp5msu4ufifo" path="res://assets/player/pi.png" id="1_rtmen"]
 [ext_resource type="Script" uid="uid://dp7auwcocb3kg" path="res://Player/player.gd" id="1_vs6r7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pk6rw"]
 size = Vector2(304, 388)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
+size = Vector2(221.5, 105)
 
 [node name="player" type="CharacterBody2D"]
 collision_layer = 2
@@ -22,3 +25,13 @@ shape = SubResource("RectangleShape2D_pk6rw")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
 limit_top = 0
+
+[node name="detectionarea" type="Area2D" parent="."]
+position = Vector2(188, 317)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectionarea"]
+position = Vector2(-183, -99)
+shape = SubResource("RectangleShape2D_4ntmi")
+
+[connection signal="area_entered" from="detectionarea" to="." method="_on_detectionarea_area_entered"]
+[connection signal="area_exited" from="detectionarea" to="." method="_on_detectionarea_area_exited"]

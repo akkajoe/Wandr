@@ -5,6 +5,8 @@ extends CharacterBody2D
 @export var max_jumps = 2
 @export var double_jump_factor = 1.5
 var jump_count = 0
+var current_grass: Area2D = null
+
 #enum {IDLE, RUN, JUMP, HURT, DEAD}
 #var state = IDLE
 func _ready():
@@ -55,3 +57,22 @@ func reset(_position):
 	position = _position
 	show()
 	
+
+
+func _on_detectionarea_area_entered(area: Area2D) -> void:
+	if area.is_in_group("grass"):
+		print("true")
+		# If we already had a grass patch, manually revert it to idle
+		if current_grass and current_grass != area:
+			current_grass.get_node("AnimatedSprite2D").play("idle")
+
+		# Now set the new patch as current and play "grass"
+		current_grass = area
+		current_grass.get_node("AnimatedSprite2D").play("grass")
+
+
+func _on_detectionarea_area_exited(area: Area2D) -> void:
+	# If the exited area is our current grass patch, idle it
+	if area == current_grass:
+		current_grass.get_node("AnimatedSprite2D").play("idle")
+		current_grass = null

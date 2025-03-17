@@ -127,11 +127,11 @@ tile_map_data = PackedByteArray("AADD/xAAAAAAAAAAAADE/xAAAAAAAAAAAADF/xAAAAAAAAA
 tile_set = SubResource("TileSet_lr68t")
 
 [node name="player" parent="." instance=ExtResource("2_8hr86")]
-position = Vector2(119, 593)
+position = Vector2(227, 514)
 scale = Vector2(0.08, 0.08)
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
-position = Vector2(46, 526)
+position = Vector2(277, 555)
 
 [node name="Door" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_8rhms")
