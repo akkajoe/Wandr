@@ -69,6 +69,7 @@ func _on_detectionarea_area_entered(area: Area2D) -> void:
 		# Now set the new patch as current and play "grass"
 		current_grass = area
 		current_grass.get_node("AnimatedSprite2D").play("grass")
+		$AudioStreamPlayer2D.play()
 
 
 func _on_detectionarea_area_exited(area: Area2D) -> void:
