@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=4 uid="uid://cn8sbqftn2ukg"]
+[gd_scene load_steps=10 format=3 uid="uid://cn8sbqftn2ukg"]
 
 [ext_resource type="PackedScene" uid="uid://cglvmvx001t2w" path="res://level_base.tscn" id="1_37g0n"]
 [ext_resource type="Script" uid="uid://6h22sctpvgsc" path="res://levels/level_02.gd" id="2_8yqd8"]
 [ext_resource type="Texture2D" uid="uid://b7k5s1188hqme" path="res://assets/World/GROUND.png" id="2_g685p"]
 [ext_resource type="PackedScene" uid="uid://c5la5njmcfbny" path="res://grass.tscn" id="4_h518d"]
+[ext_resource type="Texture2D" uid="uid://b3nu25cgd75if" path="res://assets/World/tree1.png" id="5_didps"]
+[ext_resource type="Texture2D" uid="uid://bnqekm4mw134n" path="res://assets/World/tree2.png" id="5_gia0r"]
+[ext_resource type="Texture2D" uid="uid://bqgya8c6fosdy" path="res://assets/World/tree3.png" id="6_mihb8"]
+[ext_resource type="Texture2D" uid="uid://cei4ivpljga6d" path="res://assets/World/orivale_name.png" id="7_2owmk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h518d"]
 size = Vector2(28, 366.5)
@@ -12,7 +16,7 @@ size = Vector2(28, 366.5)
 script = ExtResource("2_8yqd8")
 
 [node name="World" parent="." index="0"]
-tile_map_data = PackedByteArray("AAAc/g0AAAAAAAAAAAAd/g0AAAAAAAAAAAAe/g0AAAAAAAAAAAAf/g0AAAAAAAAAAAAg/g0AAAAAAAAAAAAh/g0AAAAAAAAAAAAi/g0AAAAAAAAAAAAj/g0AAAAAAAAAAAAk/g0AAAAAAAAAAAAl/g0AAAAAAAAAAAAm/g0AAAAAAAAAAAAn/g0AAAAAAAAAAAAo/g0AAAAAAAAAAAAp/g0AAAAAAAAAAAAq/g0AAAAAAAAAAAAr/g0AAAAAAAAAAAAs/g0AAAAAAAAAAAAt/g0AAAAAAAAAAAAu/g0AAAAAAAAAAAAv/g0AAAAAAAAAAAAw/g0AAAAAAAAAAAAx/g0AAAAAAAAAAAAy/g0AAAAAAAAAAAAz/g0AAAAAAAAAAAA0/g0AAAAAAAAAAAA1/g0AAAAAAAAAAAA2/g0AAAAAAAAAAAA3/g0AAAAAAAAAAAA4/g0AAAAAAAAAAAA5/g0AAAAAAAAAAAA6/g0AAAAAAAAAAAA7/g0AAAAAAAAAAAA8/g0AAAAAAAAAAAA9/g0AAAAAAAAAAAA+/g0AAAAAAAAAAAA//g0AAAAAAAAAAABA/g0AAAAAAAAAAABB/g0AAAAAAAAAAABC/g0AAAAAAAAAAABD/g0AAAAAAAAAAABE/g0AAAAAAAAAAABF/g0AAAAAAAAAAABG/g0AAAAAAAAAAABH/g0AAAAAAAAAAABI/g0AAAAAAAAAAABJ/g0AAAAAAAAAAABK/g0AAAAAAAAAAABL/g0AAAAAAAAAAABM/g0AAAAAAAAAAABN/g0AAAAAAAAAAABO/g0AAAAAAAAAAABP/g0AAAAAAAAAAABQ/g0AAAAAAAAAAABR/g0AAAAAAAAAAABS/g0AAAAAAAAAAABT/g0AAAAAAAAAAABU/g0AAAAAAAAAAABV/g0AAAAAAAAAAABW/g0AAAAAAAAAAABX/g0AAAAAAAAAAABY/g0AAAAAAAAAAABZ/g0AAAAAAAAAAABa/g0AAAAAAAAAAABb/g0AAAAAAAAAAABc/g0AAAAAAAAAAABd/g0AAAAAAAAAAABe/g0AAAAAAAAAAABf/g0AAAAAAAAAAABg/g0AAAAAAAAAAAA=")
+tile_map_data = PackedByteArray()
 
 [node name="player" parent="." index="1"]
 position = Vector2(767, 255)
@@ -22,30 +26,67 @@ position = Vector2(1079, 532)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="4"]
 
-[node name="levelBlock" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+[node name="Orivale" type="Sprite2D" parent="StaticBody2D" index="0"]
+position = Vector2(1129, 547)
+scale = Vector2(0.0223317, 0.0223317)
+texture = ExtResource("7_2owmk")
+
+[node name="levelBlock" type="CollisionShape2D" parent="StaticBody2D" index="1"]
 position = Vector2(1166, 464.25)
 shape = SubResource("RectangleShape2D_h518d")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" index="1"]
+[node name="levelBlock2" type="CollisionShape2D" parent="StaticBody2D" index="2"]
+position = Vector2(-301, 465)
+shape = SubResource("RectangleShape2D_h518d")
+
+[node name="tree1" type="Sprite2D" parent="StaticBody2D" index="3"]
+position = Vector2(986, 465)
+rotation = 0.10472
+scale = Vector2(0.0956715, 0.0956715)
+texture = ExtResource("5_didps")
+
+[node name="tree2" type="CollisionPolygon2D" parent="StaticBody2D" index="4"]
+position = Vector2(986, 465)
+rotation = 0.10472
+scale = Vector2(0.0956715, 0.0956715)
+polygon = PackedVector2Array(91.7461, 1072.89, 62.3398, 193.138, -23.5371, 76.0442, -55.2529, -25.7227, -251.107, -89.2175, -581.567, -33.4651, -902.725, 10.8005, -503.869, -94.1812, -213.896, -135.168, 42.6738, 6.02515, -10.7998, -902.725, -6.95996, -966.189, 19.8242, -811.354, 420.335, -1000.59, 658.861, -931.07, 412.124, -978.706, 14.8916, -758.285, 73.3281, -102.297, 178.936, -197.477, 314.072, -211.68, 395.048, -241.211, 286.164, -177.217, 161.422, -164.106, 79.8838, -39.926, 180.994, 622.087, 397.139, 378.659, 700.784, 367.765, 896.107, 326.216, 664.667, 424.111, 434.88, 437.753, 281.669, 579.976, 189.734, 705.249, 210.463, 1102.45)
+
+[node name="ground1" type="Sprite2D" parent="StaticBody2D" index="5"]
 position = Vector2(913, 573)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_g685p")
 
-[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D" index="2"]
+[node name="ground2" type="Sprite2D" parent="StaticBody2D" index="6"]
 position = Vector2(433, 573)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_g685p")
 flip_h = true
 
-[node name="Sprite2D3" type="Sprite2D" parent="StaticBody2D" index="3"]
+[node name="Sprite2D3" type="Sprite2D" parent="StaticBody2D" index="7"]
 position = Vector2(-46, 573)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_g685p")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="4"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="8"]
 position = Vector2(913, 572)
 scale = Vector2(0.1, 0.1)
-polygon = PackedVector2Array(2390, 140, 2260, 20, 2090, -80, 1990, -80, 1880, -40, 1730, 10, 1580, 30, 1340, 50, 1210, 59.9995, 900, 0, 510, -170, 200, -200, -170, -190, -580, -140, -820, -50, -960, -20, -1140, 0, -1370, -30, -1610, -190, -1850, -440, -2110, -610, -2400, -700, -2620, -650, -2820, -550, -3040, -380, -3190, -240, -3330, -140, -3520, -60, -3780, -20, -4010, -80, -4170, -150, -4410, -180, -4760, -190, -5290, -210, -5840, 40, -6030, 60, -6210, 40, -6380, 30, -6590, -10, -6710, -40, -6840, -80, -6940, -60, -7060, 60, -7190, 150, -7480, -50, -7620, -50, -7780, -10, -8080, 60, -8230, 60, -8440, 80, -8700, 10, -9060, -170, -10010, -180, -10270, -110, -10400, -40, -10600, -20, -10790, -20, -11010, -80, -11250, -250, -11520, -480, -11880, -640, -12000, -740, -11990, 760, -7460, 760, -130.001, 750, 2380, 740)
+polygon = PackedVector2Array(2390, 140, 2260, 20, 2090, -80, 1990, -80, 1880, -40, 1730, 10, 1580, 30, 1340, 50, 1210, 59.9995, 900, 0, 510, -170, 200, -200, -170, -190, -580, -140, -820, -50, -960, -20, -1140, 0, -1370, -30, -1610, -190, -1850, -440, -2110, -610, -2400, -700, -2620, -650, -2820, -550, -3040, -380, -3190, -240, -3330, -140, -3530, -40, -3780, -20, -4030, -60, -4190, -130, -4410, -180, -4760, -190, -5290, -210, -5840, 40, -6030, 60, -6210, 40, -6380, 30, -6590, -10, -6710, -40, -6840, -80, -6940, -60, -7060, 60, -7190, 150, -7480, -80, -7620, -70, -7780, -10, -8080, 40, -8230, 40, -8440, 80, -8700, -20, -9070, -200, -10010, -190, -10270, -110, -10400, -40, -10600, -20, -10790, -20, -11010, -100, -11270, -290, -11349.6, -350.475, -11540, -530, -11860, -690, -12000, -740, -11990, 760, -7460, 760, -130.001, 750, 2380, 740)
+
+[node name="tree3" type="Sprite2D" parent="StaticBody2D" index="9"]
+position = Vector2(503, 439)
+scale = Vector2(0.131453, 0.131453)
+texture = ExtResource("5_gia0r")
+
+[node name="tree4" type="CollisionPolygon2D" parent="StaticBody2D" index="10"]
+polygon = PackedVector2Array(464, 553, 461, 462, 454, 388, 453, 339, 454, 325, 457, 369, 458, 403, 475, 381, 484, 371, 506, 372, 520, 366, 527, 355, 524, 365, 517, 373, 491, 376, 480, 379, 469, 394, 492, 394, 494, 399, 506, 410, 527, 424, 505, 413, 496, 403, 485, 398, 467, 400, 459, 409, 476, 515, 480, 499, 500, 489, 534, 495, 572, 504, 527, 499, 505, 494, 487, 499, 481, 507, 477, 522, 477, 554)
+
+[node name="tree5" type="Sprite2D" parent="StaticBody2D" index="11"]
+position = Vector2(282, 473)
+scale = Vector2(0.117919, 0.117919)
+texture = ExtResource("6_mihb8")
+
+[node name="tree6" type="CollisionPolygon2D" parent="StaticBody2D" index="12"]
+polygon = PackedVector2Array(239, 566, 239, 485, 246, 461, 281, 451, 330, 444, 271, 450, 248, 454, 262, 410, 280, 380, 254, 413, 238, 479, 234, 491, 230, 567)
 
 [node name="grass" parent="." index="5" instance=ExtResource("4_h518d")]
 position = Vector2(1152, 580)
@@ -98,12 +139,12 @@ rotation = 0.0523599
 scale = Vector2(0.01, 0.01)
 
 [node name="grass11" parent="." index="15" instance=ExtResource("4_h518d")]
-position = Vector2(1008, 568)
+position = Vector2(1008, 569)
 rotation = 0.20944
 scale = Vector2(0.01, 0.01)
 
 [node name="grass12" parent="." index="16" instance=ExtResource("4_h518d")]
-position = Vector2(996, 561)
+position = Vector2(996, 564)
 rotation = 0.20944
 scale = Vector2(0.01, 0.01)
 
@@ -215,4 +256,299 @@ scale = Vector2(0.01, 0.01)
 [node name="grass34" parent="." index="38" instance=ExtResource("4_h518d")]
 position = Vector2(672, 498)
 rotation = -0.151844
+scale = Vector2(0.01, 0.01)
+
+[node name="grass35" parent="." index="39" instance=ExtResource("4_h518d")]
+position = Vector2(653, 503)
+rotation = -0.568977
+scale = Vector2(0.01, 0.01)
+
+[node name="grass36" parent="." index="40" instance=ExtResource("4_h518d")]
+position = Vector2(637, 510)
+rotation = -0.568977
+scale = Vector2(0.01, 0.01)
+
+[node name="grass37" parent="." index="41" instance=ExtResource("4_h518d")]
+position = Vector2(619, 520)
+rotation = -0.778417
+scale = Vector2(0.01, 0.01)
+
+[node name="grass38" parent="." index="42" instance=ExtResource("4_h518d")]
+position = Vector2(604, 532)
+rotation = -0.778417
+scale = Vector2(0.01, 0.01)
+
+[node name="grass39" parent="." index="43" instance=ExtResource("4_h518d")]
+position = Vector2(590, 544)
+rotation = -0.778417
+scale = Vector2(0.01, 0.01)
+
+[node name="grass40" parent="." index="44" instance=ExtResource("4_h518d")]
+position = Vector2(574, 555)
+rotation = -0.518363
+scale = Vector2(0.01, 0.01)
+
+[node name="grass41" parent="." index="45" instance=ExtResource("4_h518d")]
+position = Vector2(557, 562)
+rotation = -0.258309
+scale = Vector2(0.01, 0.01)
+
+[node name="grass42" parent="." index="46" instance=ExtResource("4_h518d")]
+position = Vector2(539, 565)
+rotation = -0.258309
+scale = Vector2(0.01, 0.01)
+
+[node name="grass43" parent="." index="47" instance=ExtResource("4_h518d")]
+position = Vector2(525, 564)
+rotation = 0.106465
+scale = Vector2(0.01, 0.01)
+
+[node name="grass44" parent="." index="48" instance=ExtResource("4_h518d")]
+position = Vector2(510, 560)
+rotation = 0.106465
+scale = Vector2(0.01, 0.01)
+
+[node name="grass45" parent="." index="49" instance=ExtResource("4_h518d")]
+position = Vector2(496, 553)
+rotation = 0.263545
+scale = Vector2(0.01, 0.01)
+
+[node name="grass46" parent="." index="50" instance=ExtResource("4_h518d")]
+position = Vector2(482, 552)
+rotation = 0.263545
+scale = Vector2(0.01, 0.01)
+
+[node name="grass47" parent="." index="51" instance=ExtResource("4_h518d")]
+position = Vector2(452, 550)
+rotation = -0.0488692
+scale = Vector2(0.01, 0.01)
+
+[node name="grass48" parent="." index="52" instance=ExtResource("4_h518d")]
+position = Vector2(409, 549)
+rotation = -0.0488692
+scale = Vector2(0.01, 0.01)
+
+[node name="grass49" parent="." index="53" instance=ExtResource("4_h518d")]
+position = Vector2(394, 549)
+rotation = -0.153589
+scale = Vector2(0.01, 0.01)
+
+[node name="grass50" parent="." index="54" instance=ExtResource("4_h518d")]
+position = Vector2(378, 552)
+rotation = -0.520108
+scale = Vector2(0.01, 0.01)
+
+[node name="grass51" parent="." index="55" instance=ExtResource("4_h518d")]
+position = Vector2(362, 558)
+rotation = -0.520108
+scale = Vector2(0.01, 0.01)
+
+[node name="grass52" parent="." index="56" instance=ExtResource("4_h518d")]
+position = Vector2(348, 564)
+rotation = -0.520108
+scale = Vector2(0.01, 0.01)
+
+[node name="grass53" parent="." index="57" instance=ExtResource("4_h518d")]
+position = Vector2(333, 570)
+rotation = -0.415388
+scale = Vector2(0.01, 0.01)
+
+[node name="grass54" parent="." index="58" instance=ExtResource("4_h518d")]
+position = Vector2(313, 574)
+rotation = -0.205949
+scale = Vector2(0.01, 0.01)
+
+[node name="grass55" parent="." index="59" instance=ExtResource("4_h518d")]
+position = Vector2(294, 573)
+rotation = 0.0541052
+scale = Vector2(0.01, 0.01)
+
+[node name="grass56" parent="." index="60" instance=ExtResource("4_h518d")]
+position = Vector2(278, 572)
+rotation = 0.0541052
+scale = Vector2(0.01, 0.01)
+
+[node name="grass57" parent="." index="61" instance=ExtResource("4_h518d")]
+position = Vector2(263, 570)
+rotation = 0.0541052
+scale = Vector2(0.01, 0.01)
+
+[node name="grass58" parent="." index="62" instance=ExtResource("4_h518d")]
+position = Vector2(219, 564)
+rotation = -0.727802
+scale = Vector2(0.01, 0.01)
+
+[node name="grass59" parent="." index="63" instance=ExtResource("4_h518d")]
+position = Vector2(209, 572)
+rotation = -0.727802
+scale = Vector2(0.01, 0.01)
+
+[node name="grass60" parent="." index="64" instance=ExtResource("4_h518d")]
+position = Vector2(200, 578)
+rotation = -0.727802
+scale = Vector2(0.01, 0.01)
+
+[node name="grass61" parent="." index="65" instance=ExtResource("4_h518d")]
+position = Vector2(189, 580)
+rotation = 0.443314
+scale = Vector2(0.01, 0.01)
+
+[node name="grass62" parent="." index="66" instance=ExtResource("4_h518d")]
+position = Vector2(178, 572)
+rotation = 0.443314
+scale = Vector2(0.01, 0.01)
+
+[node name="grass63" parent="." index="67" instance=ExtResource("4_h518d")]
+position = Vector2(164, 565)
+rotation = 0.1309
+scale = Vector2(0.01, 0.01)
+
+[node name="grass64" parent="." index="68" instance=ExtResource("4_h518d")]
+position = Vector2(148, 564)
+rotation = -0.598648
+scale = Vector2(0.01, 0.01)
+
+[node name="grass65" parent="." index="69" instance=ExtResource("4_h518d")]
+position = Vector2(133, 568)
+rotation = -0.338594
+scale = Vector2(0.01, 0.01)
+
+[node name="grass66" parent="." index="70" instance=ExtResource("4_h518d")]
+position = Vector2(118, 572)
+rotation = -0.338594
+scale = Vector2(0.01, 0.01)
+
+[node name="grass67" parent="." index="71" instance=ExtResource("4_h518d")]
+position = Vector2(101, 572)
+rotation = -0.338594
+scale = Vector2(0.01, 0.01)
+
+[node name="grass68" parent="." index="72" instance=ExtResource("4_h518d")]
+position = Vector2(84, 574)
+rotation = -0.129154
+scale = Vector2(0.01, 0.01)
+
+[node name="grass69" parent="." index="73" instance=ExtResource("4_h518d")]
+position = Vector2(65, 576)
+rotation = 0.340339
+scale = Vector2(0.01, 0.01)
+
+[node name="grass70" parent="." index="74" instance=ExtResource("4_h518d")]
+position = Vector2(51, 569)
+rotation = 0.340339
+scale = Vector2(0.01, 0.01)
+
+[node name="grass71" parent="." index="75" instance=ExtResource("4_h518d")]
+position = Vector2(36, 563)
+rotation = 0.340339
+scale = Vector2(0.01, 0.01)
+
+[node name="grass72" parent="." index="76" instance=ExtResource("4_h518d")]
+position = Vector2(21, 558)
+rotation = 0.340339
+scale = Vector2(0.01, 0.01)
+
+[node name="grass73" parent="." index="77" instance=ExtResource("4_h518d")]
+position = Vector2(8.00002, 551)
+rotation = 0.191986
+scale = Vector2(0.01, 0.01)
+
+[node name="grass74" parent="." index="78" instance=ExtResource("4_h518d")]
+position = Vector2(-8, 549)
+rotation = -0.382227
+scale = Vector2(0.01, 0.01)
+
+[node name="grass75" parent="." index="79" instance=ExtResource("4_h518d")]
+position = Vector2(-21, 550)
+rotation = -0.0698132
+scale = Vector2(0.01, 0.01)
+
+[node name="grass76" parent="." index="80" instance=ExtResource("4_h518d")]
+position = Vector2(-34, 550)
+rotation = -0.0698132
+scale = Vector2(0.01, 0.01)
+
+[node name="grass77" parent="." index="81" instance=ExtResource("4_h518d")]
+position = Vector2(-50, 550)
+rotation = -0.0698132
+scale = Vector2(0.01, 0.01)
+
+[node name="grass78" parent="." index="82" instance=ExtResource("4_h518d")]
+position = Vector2(-67, 550)
+rotation = -0.0698132
+scale = Vector2(0.01, 0.01)
+
+[node name="grass79" parent="." index="83" instance=ExtResource("4_h518d")]
+position = Vector2(-82, 550)
+rotation = -0.0698132
+scale = Vector2(0.01, 0.01)
+
+[node name="grass80" parent="." index="84" instance=ExtResource("4_h518d")]
+position = Vector2(-98, 553)
+rotation = -0.539307
+scale = Vector2(0.01, 0.01)
+
+[node name="grass81" parent="." index="85" instance=ExtResource("4_h518d")]
+position = Vector2(-112, 557)
+rotation = -0.539307
+scale = Vector2(0.01, 0.01)
+
+[node name="grass82" parent="." index="86" instance=ExtResource("4_h518d")]
+position = Vector2(-126, 561)
+rotation = -0.331613
+scale = Vector2(0.01, 0.01)
+
+[node name="grass83" parent="." index="87" instance=ExtResource("4_h518d")]
+position = Vector2(-143, 566)
+rotation = -0.122173
+scale = Vector2(0.01, 0.01)
+
+[node name="grass84" parent="." index="88" instance=ExtResource("4_h518d")]
+position = Vector2(-158, 566)
+rotation = -0.122173
+scale = Vector2(0.01, 0.01)
+
+[node name="grass85" parent="." index="89" instance=ExtResource("4_h518d")]
+position = Vector2(-171, 564)
+rotation = 0.347321
+scale = Vector2(0.01, 0.01)
+
+[node name="grass86" parent="." index="90" instance=ExtResource("4_h518d")]
+position = Vector2(-185, 558)
+rotation = 0.347321
+scale = Vector2(0.01, 0.01)
+
+[node name="grass87" parent="." index="91" instance=ExtResource("4_h518d")]
+position = Vector2(-198, 551)
+rotation = 0.347321
+scale = Vector2(0.01, 0.01)
+
+[node name="grass88" parent="." index="92" instance=ExtResource("4_h518d")]
+position = Vector2(-209, 542)
+rotation = 0.47822
+scale = Vector2(0.01, 0.01)
+
+[node name="grass89" parent="." index="93" instance=ExtResource("4_h518d")]
+position = Vector2(-220, 534)
+rotation = 0.685914
+scale = Vector2(0.01, 0.01)
+
+[node name="grass90" parent="." index="94" instance=ExtResource("4_h518d")]
+position = Vector2(-232, 524)
+rotation = 0.6353
+scale = Vector2(0.01, 0.01)
+
+[node name="grass91" parent="." index="95" instance=ExtResource("4_h518d")]
+position = Vector2(-260, 509)
+rotation = 0.268781
+scale = Vector2(0.01, 0.01)
+
+[node name="grass93" parent="." index="96" instance=ExtResource("4_h518d")]
+position = Vector2(-270, 503)
+rotation = 0.268781
+scale = Vector2(0.01, 0.01)
+
+[node name="grass92" parent="." index="97" instance=ExtResource("4_h518d")]
+position = Vector2(-246, 515)
+rotation = 0.268781
 scale = Vector2(0.01, 0.01)
