@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cn8sbqftn2ukg"]
+[gd_scene load_steps=12 format=3 uid="uid://cn8sbqftn2ukg"]
 
 [ext_resource type="PackedScene" uid="uid://cglvmvx001t2w" path="res://level_base.tscn" id="1_37g0n"]
 [ext_resource type="Script" uid="uid://6h22sctpvgsc" path="res://levels/level_02.gd" id="2_8yqd8"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bnqekm4mw134n" path="res://assets/World/tree2.png" id="5_gia0r"]
 [ext_resource type="Texture2D" uid="uid://bqgya8c6fosdy" path="res://assets/World/tree3.png" id="6_mihb8"]
 [ext_resource type="Texture2D" uid="uid://cei4ivpljga6d" path="res://assets/World/orivale_name.png" id="7_2owmk"]
+[ext_resource type="PackedScene" uid="uid://cqojob2slctjo" path="res://leaf.tscn" id="9_cwmx8"]
+[ext_resource type="AudioStream" uid="uid://dh1qxmoudtwh6" path="res://assets/audio/birds-chirping-calm-173695.mp3" id="10_05651"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h518d"]
 size = Vector2(28, 366.5)
@@ -70,7 +72,7 @@ texture = ExtResource("2_g685p")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="8"]
 position = Vector2(913, 572)
 scale = Vector2(0.1, 0.1)
-polygon = PackedVector2Array(2390, 140, 2260, 20, 2090, -80, 1990, -80, 1880, -40, 1730, 10, 1580, 30, 1340, 50, 1210, 59.9995, 900, 0, 510, -170, 200, -200, -170, -190, -580, -140, -820, -50, -960, -20, -1140, 0, -1370, -30, -1610, -190, -1850, -440, -2110, -610, -2400, -700, -2620, -650, -2820, -550, -3040, -380, -3190, -240, -3330, -140, -3530, -40, -3780, -20, -4030, -60, -4190, -130, -4410, -180, -4760, -190, -5290, -210, -5840, 40, -6030, 60, -6210, 40, -6380, 30, -6590, -10, -6710, -40, -6840, -80, -6940, -60, -7060, 60, -7190, 150, -7480, -80, -7620, -70, -7780, -10, -8080, 40, -8230, 40, -8440, 80, -8700, -20, -9070, -200, -10010, -190, -10270, -110, -10400, -40, -10600, -20, -10790, -20, -11010, -100, -11270, -290, -11349.6, -350.475, -11540, -530, -11860, -690, -12000, -740, -11990, 760, -7460, 760, -130.001, 750, 2380, 740)
+polygon = PackedVector2Array(2390, 140, 2260, 20, 2090, -80, 1990, -80, 1880, -40, 1730, 10, 1580, 30, 1340, 50, 1210, 59.9995, 900, 0, 510, -170, 200, -200, -170, -190, -580, -140, -820, -50, -960, -20, -1140, 0, -1370, -30, -1610, -190, -1850, -440, -2110, -610, -2400, -700, -2620, -650, -2820, -550, -3040, -380, -3190, -240, -3330, -140, -3530, -40, -3780, -20, -4030, -60, -4190, -130, -4410, -180, -4760, -190, -5290, -210, -5840, 40, -6030, 60, -6210, 40, -6380, 30, -6590, -10, -6710, -40, -6840, -80, -6940, -60, -7060, 60, -7190, 150, -7480, -80, -7620, -70, -7780, -10, -8080, 40, -8230, 40, -8440, 80, -8700, -20, -9070, -200, -10010, -190, -10270, -110, -10400, -40, -10600, -20, -10790, -20, -11030, -80, -11300, -250, -11390, -330, -11610, -500, -11890, -620, -12000, -740, -11990, 760, -7460, 760, -130.001, 750, 2380, 740)
 
 [node name="tree3" type="Sprite2D" parent="StaticBody2D" index="9"]
 position = Vector2(503, 439)
@@ -552,3 +554,81 @@ scale = Vector2(0.01, 0.01)
 position = Vector2(-246, 515)
 rotation = 0.268781
 scale = Vector2(0.01, 0.01)
+
+[node name="leaf1" parent="." index="98" instance=ExtResource("9_cwmx8")]
+position = Vector2(1007, 379)
+
+[node name="leaf8" parent="." index="99" instance=ExtResource("9_cwmx8")]
+position = Vector2(481, 367)
+
+[node name="leaf9" parent="." index="100" instance=ExtResource("9_cwmx8")]
+position = Vector2(512, 487)
+
+[node name="leaf10" parent="." index="101" instance=ExtResource("9_cwmx8")]
+position = Vector2(505, 506)
+
+[node name="leaf11" parent="." index="102" instance=ExtResource("9_cwmx8")]
+position = Vector2(269, 447)
+scale = Vector2(2, 1)
+
+[node name="leaf2" parent="." index="103" instance=ExtResource("9_cwmx8")]
+position = Vector2(1029, 503)
+
+[node name="leaf3" parent="." index="104" instance=ExtResource("9_cwmx8")]
+position = Vector2(938, 447)
+
+[node name="leaf4" parent="." index="105" instance=ExtResource("9_cwmx8")]
+position = Vector2(980, 448)
+scale = Vector2(0.6, 0.8)
+
+[node name="leaf13" parent="." index="106" instance=ExtResource("9_cwmx8")]
+position = Vector2(459, 393)
+scale = Vector2(0.6, 0.8)
+
+[node name="leaf12" parent="." index="107" instance=ExtResource("9_cwmx8")]
+position = Vector2(494, 434)
+scale = Vector2(0.6, 0.8)
+
+[node name="leaf16" parent="." index="108" instance=ExtResource("9_cwmx8")]
+position = Vector2(451, 443)
+scale = Vector2(0.6, 0.8)
+
+[node name="leaf17" parent="." index="109" instance=ExtResource("9_cwmx8")]
+position = Vector2(468, 432)
+scale = Vector2(0.6, 0.8)
+
+[node name="leaf18" parent="." index="110" instance=ExtResource("9_cwmx8")]
+position = Vector2(446, 418)
+scale = Vector2(0.6, 0.8)
+
+[node name="leaf19" parent="." index="111" instance=ExtResource("9_cwmx8")]
+position = Vector2(235, 469)
+scale = Vector2(0.6, 0.8)
+
+[node name="leaf7" parent="." index="112" instance=ExtResource("9_cwmx8")]
+position = Vector2(1003, 505)
+scale = Vector2(0.6, 0.8)
+
+[node name="leaf5" parent="." index="113" instance=ExtResource("9_cwmx8")]
+position = Vector2(954, 462)
+
+[node name="leaf6" parent="." index="114" instance=ExtResource("9_cwmx8")]
+position = Vector2(985, 515)
+rotation = -1.51146
+scale = Vector2(1.5, 1)
+
+[node name="leaf15" parent="." index="115" instance=ExtResource("9_cwmx8")]
+position = Vector2(460, 492)
+rotation = -1.51146
+scale = Vector2(1.5, 1)
+
+[node name="leaf14" parent="." index="116" instance=ExtResource("9_cwmx8")]
+position = Vector2(448, 380)
+rotation = -1.51146
+scale = Vector2(1.5, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="117"]
+stream = ExtResource("10_05651")
+volume_db = 7.157
+pitch_scale = 0.35
+parameters/looping = true

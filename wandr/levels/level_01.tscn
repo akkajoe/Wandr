@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://boanu56dhkb13"]
+[gd_scene load_steps=8 format=4 uid="uid://boanu56dhkb13"]
 
 [ext_resource type="PackedScene" uid="uid://cglvmvx001t2w" path="res://level_base.tscn" id="1_qghah"]
 [ext_resource type="PackedScene" uid="uid://ddgdwqk60fktj" path="res://items/door.tscn" id="2_mckh2"]
 [ext_resource type="Texture2D" uid="uid://dbsqpdhe5fhf2" path="res://assets/items/door.png" id="3_81a5f"]
 [ext_resource type="Texture2D" uid="uid://cxmommm5wm7mm" path="res://assets/bg/city_bg.jpg" id="4_gg43x"]
+[ext_resource type="AudioStream" uid="uid://dmfjnwevcrvq6" path="res://assets/audio/rustling-grass-2-101283.mp3" id="5_mllcm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gg43x"]
 texture = ExtResource("3_81a5f")
@@ -46,5 +47,8 @@ tile_set = SubResource("TileSet_mckh2")
 position = Vector2(530, 191)
 scale = Vector2(1.63448, 1.63448)
 texture = ExtResource("4_gg43x")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="6"]
+stream = ExtResource("5_mllcm")
 
 [connection signal="body_entered" from="door" to="." method="_on_door_entered"]

@@ -67,8 +67,14 @@ func reset(_position):
 	show()
 	
 
-
 func _on_detectionarea_area_entered(area: Area2D) -> void:
+	if area.is_in_group("leaf"):
+		print("inside leaf")
+		var audio_player = area.get_node_or_null("AudioStreamPlayer2D")
+		if audio_player:
+			print("playing leaf!")
+			audio_player.play()
+	
 	if area.is_in_group("grass"):
 		print("true")
 		# If we already had a grass patch, manually revert it to idle
@@ -83,6 +89,12 @@ func _on_detectionarea_area_entered(area: Area2D) -> void:
 
 func _on_detectionarea_area_exited(area: Area2D) -> void:
 	# If the exited area is our current grass patch, idle it
+	if area.is_in_group("leaf"):
+		var audio_player = area.get_node_or_null("AudioStreamPlayer2D")
+		if audio_player:
+			print("playing leaf!")
+			audio_player.stop()
+	
 	if area == current_grass:
 		current_grass.get_node("AnimatedSprite2D").play("idle")
 		current_grass = null

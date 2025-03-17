@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqojob2slctjo"]
+
+[ext_resource type="AudioStream" uid="uid://bel408yqoaiwk" path="res://assets/audio/sound-of-rustling-leaves-in-a-light-breeze-hd-260729.mp3" id="1_p3lty"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qgvdh"]
+size = Vector2(19, 7)
+
+[node name="Area2D" type="Area2D" groups=["leaf"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["leaf"]]
+position = Vector2(2.5, -2.5)
+shape = SubResource("RectangleShape2D_qgvdh")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_p3lty")
+volume_db = 10.526
+pitch_scale = 1.86
