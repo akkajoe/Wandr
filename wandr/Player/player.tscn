@@ -33,7 +33,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pk6rw"]
-size = Vector2(304, 388)
+size = Vector2(237, 358)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
 size = Vector2(221.5, 105)
@@ -51,15 +51,15 @@ animation = &"run"
 frame_progress = 0.757567
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(6, 42)
+position = Vector2(11.5, 27)
 shape = SubResource("RectangleShape2D_pk6rw")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
 limit_left = -285
-limit_top = 0
+limit_top = 60
 limit_right = 1150
-limit_bottom = 648
+limit_bottom = 620
 editor_draw_limits = true
 
 [node name="detectionarea" type="Area2D" parent="."]
