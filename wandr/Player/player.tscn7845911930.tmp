@@ -38,9 +38,14 @@ size = Vector2(221.5, 105)
 collision_layer = 2
 collision_mask = 13
 script = ExtResource("1_vs6r7")
+gravity = null
+run_speed = null
+jump_speed = null
+max_jumps = null
+double_jump_factor = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(11, -21)
+position = Vector2(-5137, -2250)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_vtle1")
 animation = &"idle"

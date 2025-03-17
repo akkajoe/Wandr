@@ -32,10 +32,11 @@ func get_input():
 	velocity.x = 0
 	if right:
 		velocity.x += run_speed
-		$Sprite2D.flip_h = false
+		$AnimatedSprite2D.flip_h = false
 	if left:
 		velocity.x -= run_speed
-		$Sprite2D.flip_h = true
+		$AnimatedSprite2D.flip_h = true
+ 		#$AnimatedSprite2D.flip_h = true
 	# only allow jumping when on the ground
 	if jump and is_on_floor():
 		#change_state(JUMP)
@@ -52,6 +53,14 @@ func get_input():
 func _physics_process(delta):
 	velocity.y += gravity * delta
 	get_input()
+	
+	# Choose animation based on movement and ground state
+	if !is_on_floor():
+		$AnimatedSprite2D.play("idle")
+	elif velocity.x != 0:
+		$AnimatedSprite2D.play("run")
+	else:
+		$AnimatedSprite2D.play("idle")
 	move_and_slide()
 func reset(_position):
 	position = _position
