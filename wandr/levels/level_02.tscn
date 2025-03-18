@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cn8sbqftn2ukg"]
+[gd_scene load_steps=15 format=3 uid="uid://cn8sbqftn2ukg"]
 
 [ext_resource type="PackedScene" uid="uid://cglvmvx001t2w" path="res://level_base.tscn" id="1_37g0n"]
 [ext_resource type="Script" uid="uid://6h22sctpvgsc" path="res://levels/level_02.gd" id="2_8yqd8"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://dh1qxmoudtwh6" path="res://assets/audio/birds-chirping-calm-173695.mp3" id="10_05651"]
 [ext_resource type="Texture2D" uid="uid://bcwodojyn0lc2" path="res://assets/bg/orivale_bg.png" id="11_xxuo2"]
 [ext_resource type="Texture2D" uid="uid://be7rxerfdnm4o" path="res://assets/World/ground2.png" id="12_liqpl"]
+[ext_resource type="Texture2D" uid="uid://w7lv41y860xk" path="res://assets/World/teabush.png" id="13_4c076"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h518d"]
 size = Vector2(28, 366.5)
@@ -74,7 +75,7 @@ texture = ExtResource("2_g685p")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="8"]
 position = Vector2(913, 572)
 scale = Vector2(0.1, 0.1)
-polygon = PackedVector2Array(2390, 140, 2260, 20, 2090, -80, 1990, -80, 1870, -40, 1720, -20, 1580, 10, 1330, 30, 1200, 50, 890, -40, 490, -200, 70, -210, -240, -200, -580, -170, -840, -60, -1030, -30, -1200, -40, -1370, -90, -1620, -250, -1850, -460, -2120, -620, -2380, -710, -2620, -650, -2820, -550, -3060, -380, -3230, -260, -3370, -150, -3550, -70, -3790, -40, -4040, -90, -4200, -150, -4420, -210, -4760, -230, -5290, -210, -5850, 10, -6070, 40, -6220, 20, -6410, -10, -6600, -20, -6730, -60, -6850, -110, -6960, -70, -7090, 50, -7190, 110, -7480, -80, -7640, -80, -7780, -30, -8080, 20, -8230, 20, -8460, 40, -8710, -50, -9080, -200, -10010, -200, -10280, -140, -10430, -70, -10610, -40, -10800, -50, -11020, -110, -11300, -280, -11390, -370, -11610, -560, -11870, -670, -12000, -740, -11990, 760, -7460, 760, -130.001, 750, 2380, 740)
+polygon = PackedVector2Array(2390, 140, 2260, 20, 2090, -80, 1990, -80, 1870, -40, 1720, -20, 1580, 10, 1330, 30, 1200, 50, 890, -40, 490, -200, 70, -210, -240, -200, -570, -180, -840, -80, -1040, -40, -1210, -60, -1370, -90, -1620, -250, -1850, -460, -2120, -620, -2380, -710, -2620, -650, -2820, -550, -3060, -380, -3230, -260, -3370, -150, -3550, -70, -3790, -40, -4040, -90, -4200, -150, -4420, -210, -4760, -230, -5290, -210, -5850, 10, -6070, 40, -6220, 20, -6410, -10, -6600, -20, -6730, -60, -6850, -110, -6960, -70, -7090, 50, -7190, 110, -7480, -80, -7640, -80, -7780, -30, -8080, 20, -8230, 20, -8460, 40, -8710, -60, -9080, -220, -9860, -220, -10160, -180, -10430, -70, -10610, -50, -10810, -60, -11020, -140, -11260, -300, -11380, -430, -11610, -600, -11870, -670, -12000, -740, -11990, 760, -7460, 760, -130.001, 750, 2380, 740)
 
 [node name="tree3" type="Sprite2D" parent="StaticBody2D" index="9"]
 position = Vector2(503, 439)
@@ -209,12 +210,12 @@ scale = Vector2(0.01, 0.01)
 
 [node name="grass24" parent="." index="28" instance=ExtResource("4_h518d")]
 position = Vector2(801, 563)
-rotation = -0.205949
+rotation = 0.00349066
 scale = Vector2(0.01, 0.01)
 
 [node name="grass25" parent="." index="29" instance=ExtResource("4_h518d")]
 position = Vector2(786, 560)
-rotation = -0.0488692
+rotation = 0.16057
 scale = Vector2(0.01, 0.01)
 
 [node name="grass26" parent="." index="30" instance=ExtResource("4_h518d")]
@@ -665,3 +666,538 @@ position = Vector2(487, 610)
 scale = Vector2(0.0951937, 0.0677579)
 texture = ExtResource("12_liqpl")
 flip_h = true
+
+[node name="teabush3" type="Sprite2D" parent="." index="123"]
+position = Vector2(1072, 611)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush26" type="Sprite2D" parent="." index="124"]
+position = Vector2(1072, 631)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush" type="Sprite2D" parent="." index="125"]
+position = Vector2(1135, 603)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush24" type="Sprite2D" parent="." index="126"]
+position = Vector2(1131, 628)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush25" type="Sprite2D" parent="." index="127"]
+position = Vector2(1103, 628)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush2" type="Sprite2D" parent="." index="128"]
+position = Vector2(1103, 607)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush4" type="Sprite2D" parent="." index="129"]
+position = Vector2(1038, 608)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush27" type="Sprite2D" parent="." index="130"]
+position = Vector2(1048, 631)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush28" type="Sprite2D" parent="." index="131"]
+position = Vector2(1021, 629)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush29" type="Sprite2D" parent="." index="132"]
+position = Vector2(989, 632)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush30" type="Sprite2D" parent="." index="133"]
+position = Vector2(961, 628)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush31" type="Sprite2D" parent="." index="134"]
+position = Vector2(935, 628)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush32" type="Sprite2D" parent="." index="135"]
+position = Vector2(907, 627)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush5" type="Sprite2D" parent="." index="136"]
+position = Vector2(1006, 608)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush6" type="Sprite2D" parent="." index="137"]
+position = Vector2(980, 603)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush7" type="Sprite2D" parent="." index="138"]
+position = Vector2(951, 602)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush8" type="Sprite2D" parent="." index="139"]
+position = Vector2(924, 599)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush9" type="Sprite2D" parent="." index="140"]
+position = Vector2(894, 601)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush33" type="Sprite2D" parent="." index="141"]
+position = Vector2(868, 607)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush34" type="Sprite2D" parent="." index="142"]
+position = Vector2(882, 631)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush35" type="Sprite2D" parent="." index="143"]
+position = Vector2(851, 633)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush36" type="Sprite2D" parent="." index="144"]
+position = Vector2(818, 631)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush37" type="Sprite2D" parent="." index="145"]
+position = Vector2(788, 623)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush10" type="Sprite2D" parent="." index="146"]
+position = Vector2(835, 609)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush11" type="Sprite2D" parent="." index="147"]
+position = Vector2(804, 606)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush12" type="Sprite2D" parent="." index="148"]
+position = Vector2(775, 591)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush13" type="Sprite2D" parent="." index="149"]
+position = Vector2(749, 578)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush14" type="Sprite2D" parent="." index="150"]
+position = Vector2(719, 571)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush15" type="Sprite2D" parent="." index="151"]
+position = Vector2(688, 573)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush16" type="Sprite2D" parent="." index="152"]
+position = Vector2(657, 578)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush17" type="Sprite2D" parent="." index="153"]
+position = Vector2(760, 609)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush18" type="Sprite2D" parent="." index="154"]
+position = Vector2(736, 602)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush38" type="Sprite2D" parent="." index="155"]
+position = Vector2(709, 598)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush39" type="Sprite2D" parent="." index="156"]
+position = Vector2(677, 601)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush40" type="Sprite2D" parent="." index="157"]
+position = Vector2(732, 630)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush41" type="Sprite2D" parent="." index="158"]
+position = Vector2(704, 625)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush42" type="Sprite2D" parent="." index="159"]
+position = Vector2(676, 623)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush43" type="Sprite2D" parent="." index="160"]
+position = Vector2(646, 604)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush44" type="Sprite2D" parent="." index="161"]
+position = Vector2(617, 611)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush45" type="Sprite2D" parent="." index="162"]
+position = Vector2(585, 613)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush46" type="Sprite2D" parent="." index="163"]
+position = Vector2(555, 606)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush47" type="Sprite2D" parent="." index="164"]
+position = Vector2(524, 600)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush48" type="Sprite2D" parent="." index="165"]
+position = Vector2(644, 632)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush49" type="Sprite2D" parent="." index="166"]
+position = Vector2(610, 633)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush50" type="Sprite2D" parent="." index="167"]
+position = Vector2(576, 633)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush51" type="Sprite2D" parent="." index="168"]
+position = Vector2(544, 630)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush52" type="Sprite2D" parent="." index="169"]
+position = Vector2(510, 624)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush53" type="Sprite2D" parent="." index="170"]
+position = Vector2(495, 595)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush54" type="Sprite2D" parent="." index="171"]
+position = Vector2(478, 616)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush55" type="Sprite2D" parent="." index="172"]
+position = Vector2(453, 615)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush19" type="Sprite2D" parent="." index="173"]
+position = Vector2(466, 589)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush20" type="Sprite2D" parent="." index="174"]
+position = Vector2(436, 598)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush56" type="Sprite2D" parent="." index="175"]
+position = Vector2(415, 616)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush21" type="Sprite2D" parent="." index="176"]
+position = Vector2(397, 609)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush22" type="Sprite2D" parent="." index="177"]
+position = Vector2(366, 605)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush23" type="Sprite2D" parent="." index="178"]
+position = Vector2(334, 606)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush57" type="Sprite2D" parent="." index="179"]
+position = Vector2(379, 632)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush58" type="Sprite2D" parent="." index="180"]
+position = Vector2(435, 635)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush59" type="Sprite2D" parent="." index="181"]
+position = Vector2(407, 636)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush60" type="Sprite2D" parent="." index="182"]
+position = Vector2(347, 628)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush61" type="Sprite2D" parent="." index="183"]
+position = Vector2(303, 613)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush62" type="Sprite2D" parent="." index="184"]
+position = Vector2(273, 612)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush65" type="Sprite2D" parent="." index="185"]
+position = Vector2(245, 615)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush66" type="Sprite2D" parent="." index="186"]
+position = Vector2(214, 614)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush67" type="Sprite2D" parent="." index="187"]
+position = Vector2(181, 612)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush68" type="Sprite2D" parent="." index="188"]
+position = Vector2(149, 613)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush69" type="Sprite2D" parent="." index="189"]
+position = Vector2(121, 610)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush70" type="Sprite2D" parent="." index="190"]
+position = Vector2(88, 615)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush71" type="Sprite2D" parent="." index="191"]
+position = Vector2(57, 608)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush72" type="Sprite2D" parent="." index="192"]
+position = Vector2(27, 598)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush81" type="Sprite2D" parent="." index="193"]
+position = Vector2(-4, 602)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush82" type="Sprite2D" parent="." index="194"]
+position = Vector2(-35, 606)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush83" type="Sprite2D" parent="." index="195"]
+position = Vector2(-64, 609)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush84" type="Sprite2D" parent="." index="196"]
+position = Vector2(-92, 609)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush85" type="Sprite2D" parent="." index="197"]
+position = Vector2(-123, 612)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush86" type="Sprite2D" parent="." index="198"]
+position = Vector2(-156, 614)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush87" type="Sprite2D" parent="." index="199"]
+position = Vector2(-188, 613)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush88" type="Sprite2D" parent="." index="200"]
+position = Vector2(-216, 602)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush89" type="Sprite2D" parent="." index="201"]
+position = Vector2(-245, 591)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush90" type="Sprite2D" parent="." index="202"]
+position = Vector2(10, 625)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush91" type="Sprite2D" parent="." index="203"]
+position = Vector2(-25, 628)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush92" type="Sprite2D" parent="." index="204"]
+position = Vector2(-25, 628)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush93" type="Sprite2D" parent="." index="205"]
+position = Vector2(-58, 632)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush94" type="Sprite2D" parent="." index="206"]
+position = Vector2(-88, 630)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush95" type="Sprite2D" parent="." index="207"]
+position = Vector2(-119, 636)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush96" type="Sprite2D" parent="." index="208"]
+position = Vector2(-152, 636)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush97" type="Sprite2D" parent="." index="209"]
+position = Vector2(-182, 636)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush98" type="Sprite2D" parent="." index="210"]
+position = Vector2(-214, 633)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush99" type="Sprite2D" parent="." index="211"]
+position = Vector2(-241, 620)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush100" type="Sprite2D" parent="." index="212"]
+position = Vector2(-268, 613)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush101" type="Sprite2D" parent="." index="213"]
+position = Vector2(-271, 585)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush102" type="Sprite2D" parent="." index="214"]
+position = Vector2(-296, 578)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush103" type="Sprite2D" parent="." index="215"]
+position = Vector2(-314, 578)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush104" type="Sprite2D" parent="." index="216"]
+position = Vector2(-296, 605)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush105" type="Sprite2D" parent="." index="217"]
+position = Vector2(-265, 639)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush106" type="Sprite2D" parent="." index="218"]
+position = Vector2(-295, 636)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush107" type="Sprite2D" parent="." index="219"]
+position = Vector2(-321, 621)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush63" type="Sprite2D" parent="." index="220"]
+position = Vector2(319, 633)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush64" type="Sprite2D" parent="." index="221"]
+position = Vector2(286, 635)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush73" type="Sprite2D" parent="." index="222"]
+position = Vector2(259, 637)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush74" type="Sprite2D" parent="." index="223"]
+position = Vector2(226, 638)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush75" type="Sprite2D" parent="." index="224"]
+position = Vector2(197, 637)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush76" type="Sprite2D" parent="." index="225"]
+position = Vector2(164, 637)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush77" type="Sprite2D" parent="." index="226"]
+position = Vector2(134, 637)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush78" type="Sprite2D" parent="." index="227"]
+position = Vector2(105, 635)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush79" type="Sprite2D" parent="." index="228"]
+position = Vector2(71, 636)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")
+
+[node name="teabush80" type="Sprite2D" parent="." index="229"]
+position = Vector2(38, 630)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("13_4c076")

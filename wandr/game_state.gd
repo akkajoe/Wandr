@@ -12,3 +12,4 @@ func next_level():
 	if current_level <= num_levels:
 		print('INN')
 		get_tree().change_scene_to_file(game_scene)
+		
